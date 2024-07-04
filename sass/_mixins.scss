@@ -1,0 +1,42 @@
+@mixin flexCenter($wrap : wrap, $alignItems : center, $justifyContent : center) {
+  display: flex;
+  flex-wrap: $wrap;
+  align-items: $alignItems;
+  justify-content: $justifyContent;
+  gap: $default-gap;
+  padding: $default-padding;
+  margin: $default-margin;
+}
+
+/* img */
+
+@mixin responsiveImg($width : 100%) {
+  width: $width;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* box shadow */
+
+@mixin boxShadow {
+  border-radius: 1rem;
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
+}
+
+
+/* button */
+@mixin ctaButton {
+  min-width: 125px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  border: none;
+  transition: 0.2s background-color ease-in-out, 0.3s color ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $CTA-color;
+    color: $fontColor-second;
+  }
+}

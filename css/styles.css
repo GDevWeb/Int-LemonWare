@@ -1,0 +1,860 @@
+/* size */
+/* marges  */
+/* img */
+/* box shadow */
+/* button */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+/* font */
+p,
+li {
+  text-wrap: balance;
+  line-height: 2.56rem;
+}
+
+/* size */
+/* marges  */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-align: center;
+  text-wrap: balance;
+  font-weight: bolder;
+  line-height: 4rem;
+}
+
+h1 {
+  font-size: clamp(1.4rem, 5vw, 2.8rem);
+}
+
+h2 {
+  font-size: clamp(1.4rem, 4.5vw, 2.8rem);
+}
+
+h3 {
+  font-size: clamp(1.4rem, 4vw, 2.8rem);
+}
+
+h4 {
+  font-size: clamp(1.4rem, 3.5vw, 2.8rem);
+}
+
+h5 {
+  font-size: clamp(1.4rem, 3vw, 2.8rem);
+}
+
+h6 {
+  font-size: clamp(1.4rem, 2.5vw, 2.8rem);
+}
+
+p,
+li {
+  text-wrap: balance;
+  font-size: clamp(1.6rem, 2vw, 2rem);
+}
+
+/* theme color */
+/* debug */
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 0.64rem;
+  font-family: "Inter", sans serif;
+}
+
+body {
+  min-width: 425px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: #fefffe;
+  color: #2e2f2f;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+}
+body #wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  position: relative;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  width: 0;
+  height: 2px;
+  background-color: #b10001;
+  transition: width 0.4s;
+}
+
+a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+button {
+  min-width: 125px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  border: none;
+  transition: 0.2s background-color ease-in-out, 0.3s color ease-in-out;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #b10001;
+  color: #ffffff;
+}
+
+svg {
+  display: block;
+  width: 100%;
+  min-width: 24px;
+  max-width: 64px;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+nav#navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 10vh;
+  padding: 1rem;
+}
+nav#navBar #logo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin: 1rem;
+  width: 30%;
+  max-width: 200px;
+  height: auto;
+}
+nav#navBar #logo img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+nav#navBar ul#menu {
+  position: absolute;
+  top: 51px;
+  right: 0;
+  z-index: 1;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem;
+  background-color: #b10001;
+  border-radius: 1rem;
+}
+@media screen and (min-width: 769px) {
+  nav#navBar ul#menu {
+    position: static;
+    top: 0;
+    z-index: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    background-color: transparent;
+  }
+}
+nav#navBar ul#menu li {
+  width: 100%;
+  margin: 5px 0;
+  text-align: center;
+}
+@media screen and (min-width: 769px) {
+  nav#navBar ul#menu li {
+    width: auto;
+    margin-left: 1rem;
+  }
+}
+nav#navBar ul#menu li a {
+  color: #ffffff;
+}
+@media screen and (min-width: 769px) {
+  nav#navBar ul#menu li a {
+    color: #2e2f2f;
+  }
+}
+nav#navBar #secondMenu {
+  display: none;
+}
+@media screen and (min-width: 769px) {
+  nav#navBar #secondMenu {
+    width: 45%;
+    flex-direction: row;
+    justify-content: flex-end;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 1rem;
+    width: 100%;
+  }
+}
+nav#navBar #secondMenu #liAccount,
+nav#navBar #secondMenu #liContact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+}
+@media screen and (min-width: 769px) {
+  nav#navBar #secondMenu #liAccount,
+  nav#navBar #secondMenu #liContact {
+    width: 45%;
+    width: auto;
+  }
+}
+
+button#btnNavBar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin: 1rem;
+  width: 40px;
+  height: 40px;
+  background-color: #b10001;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #ffffff;
+}
+@media screen and (min-width: 769px) {
+  button#btnNavBar {
+    display: none;
+  }
+}
+
+/* end navBar  */
+section#hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin: 1rem;
+  width: 100%;
+}
+section#hero #leftPart,
+section#hero #rightPart {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin: 1rem;
+  flex-basis: 100%;
+}
+@media screen and (min-width: 990px) {
+  section#hero #leftPart,
+  section#hero #rightPart {
+    flex-basis: 45%;
+  }
+}
+section#hero #leftPart #breadCrumb,
+section#hero #rightPart #breadCrumb {
+  display: flex;
+  align-items: start;
+  justify-content: flex-start;
+  gap: 1rem;
+  width: 100%;
+  margin: 1rem;
+  padding: 1rem;
+}
+section#hero #leftPart ul,
+section#hero #rightPart ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin: 1rem;
+  display: inline-flex;
+  width: 100%;
+}
+section#hero #leftPart ul a,
+section#hero #rightPart ul a {
+  transition: 0.2s color ease-in-out;
+}
+section#hero #leftPart ul a:hover,
+section#hero #rightPart ul a:hover {
+  color: #b10001;
+}
+section#hero #leftPart #content,
+section#hero #rightPart #content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin: 1rem;
+  padding: 1rem;
+  width: 100%;
+}
+section#hero #leftPart #content p.description,
+section#hero #rightPart #content p.description {
+  text-align: center;
+  color: #a7a7a7;
+}
+section#hero #leftPart #content #buttonsContainer,
+section#hero #rightPart #content #buttonsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin: 1rem;
+  width: 100%;
+}
+section#hero #group_sixth {
+  position: relative;
+  display: inline-block;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
+}
+section#hero #group_sixth img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+section#hero #group_sixth .element {
+  width: 2rem;
+  height: 2rem;
+  background-color: #b10001;
+  position: absolute;
+}
+section#hero #group_sixth .element.one {
+  top: 60px;
+  right: -10px;
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+  transform: rotate(180deg);
+}
+section#hero #group_sixth .element.two {
+  bottom: 40px;
+  right: -10px;
+  width: 5rem;
+  height: 5rem;
+  transform: rotate(90deg);
+  clip-path: polygon(100% 0, 100% 100%, 0 0);
+}
+section#hero #group_sixth .element.three {
+  bottom: 150px;
+  left: -10px;
+  clip-path: polygon(0 100%, 100% 100%, 0 0);
+}
+section#hero #group_sixth .element.four {
+  bottom: -10px;
+  right: -10px;
+  clip-path: polygon(100% 100%, 0 100%, 100% 0);
+}
+
+/* end section hero  */
+section#why_us {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin: 1rem;
+  flex-basis: 100%;
+}
+section#why_us .content_text {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin: 1rem;
+  flex-basis: 100%;
+}
+@media screen and (min-width: 990px) {
+  section#why_us .content_text {
+    flex-basis: 45%;
+  }
+}
+
+#logoContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 1rem;
+  padding: 1rem;
+  margin: 1rem;
+  flex-basis: 100%;
+}
+@media screen and (min-width: 990px) {
+  #logoContainer {
+    flex-basis: 45%;
+  }
+}
+#logoContainer img {
+  width: 45%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+@media screen and (min-width: 768px) {
+  #logoContainer img {
+    width: 25%;
+  }
+}
+
+#serviceContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin: 1rem;
+  flex-basis: 100%;
+}
+
+.card, #priceFieldsContainer .priceField {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin: 1rem;
+  width: 100%;
+  background: transparent;
+  border-radius: 1rem;
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
+}
+@media screen and (min-width: 768px) {
+  .card, #priceFieldsContainer .priceField {
+    width: 45%;
+    min-height: 550px;
+  }
+}
+@media screen and (min-width: 990px) {
+  .card, #priceFieldsContainer .priceField {
+    width: 45%;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .card, #priceFieldsContainer .priceField {
+    width: 22%;
+    min-height: 600px;
+  }
+}
+.card .frame, #priceFieldsContainer .priceField .frame {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin: 1rem;
+  width: 100%;
+}
+.card .frame img, #priceFieldsContainer .priceField .frame img {
+  width: 45%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+.card .content, #priceFieldsContainer .priceField .content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin: 1rem;
+  width: 100%;
+}
+.card .content p, #priceFieldsContainer .priceField .content p {
+  text-align: center;
+}
+
+/* end why_us  */
+section#pricing {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin: 1rem;
+  width: 100%;
+}
+
+#pricingContainer, #priceFieldsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin: 1rem;
+  width: 100%;
+}
+#pricingContainer h1, #priceFieldsContainer h1 {
+  width: 100%;
+}
+#pricingContainer .content_text, #priceFieldsContainer .content_text {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin: 1rem;
+  text-align: center;
+}
+#pricingContainer #selectPaymentOption, #priceFieldsContainer #selectPaymentOption {
+  width: 100%;
+}
+
+/* switch button */
+.toggle-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.toggle-container span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45%;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.discount {
+  padding: 2px 5px;
+  margin-left: 2rem;
+  border-radius: 1rem;
+  font-size: 1.6rem;
+  text-align: center;
+  background-color: yellow;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 75px;
+  height: 34px;
+  margin: auto;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+span.slider {
+  width: 60px;
+  background-color: #b10001;
+}
+
+span.discount {
+  font-size: 1rem;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #b00;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.tab-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.tab {
+  font-size: 18px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.tab#basic.active {
+  border-bottom: 3px solid #b00;
+}
+
+.tab#premium.active {
+  border-bottom: 3px solid #888;
+}
+
+/* end switch button */
+@media screen and (min-width: 768px) {
+  #priceFieldsContainer {
+    justify-content: start;
+  }
+}
+@media screen and (min-width: 768px) {
+  #priceFieldsContainer .priceField {
+    width: 45%;
+    align-items: start;
+  }
+}
+#priceFieldsContainer .priceField p.explanations {
+  text-align: center;
+}
+#priceFieldsContainer .priceField .paymentModeContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem;
+}
+#priceFieldsContainer .priceField .paymentModeContainer p.price {
+  width: 100%;
+  font-size: 3rem;
+  font-weight: 800;
+  text-align: center;
+  margin: 1rem 0;
+}
+#priceFieldsContainer .priceField #buttonContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin: 1rem;
+  width: 100%;
+}
+
+section#faq {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin: 1rem;
+}
+section#faq #faqCardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin: 1rem;
+}
+section#faq #faqCardContainer .card .heading, section#faq #faqCardContainer #priceFieldsContainer .priceField .heading, #priceFieldsContainer section#faq #faqCardContainer .priceField .heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin: 1rem;
+  width: 100%;
+}
+section#faq #faqCardContainer .card .heading h3, section#faq #faqCardContainer #priceFieldsContainer .priceField .heading h3, #priceFieldsContainer section#faq #faqCardContainer .priceField .heading h3 {
+  width: 100%;
+}
+
+/* end section faq */
+section#contact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin: 1rem;
+  width: 100%;
+}
+section#contact .contactContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin: 1rem;
+  width: 100%;
+}
+section#contact .contactContainer .left p {
+  width: 100%;
+  text-align: center;
+}
+section#contact form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin: 1rem;
+  width: 100%;
+}
+section#contact form .formGroup {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin: 1rem;
+  width: 100%;
+}
+section#contact form .formGroup label {
+  width: 100%;
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-align: center;
+}
+section#contact form .formGroup input,
+section#contact form .formGroup textarea {
+  flex: 1 0 80%;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
+}
+section#contact form .formGroup textarea {
+  min-height: 250px;
+  resize: none;
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin: 1rem;
+  width: 100%;
+  height: 15vh;
+  background-color: #b10001;
+  color: #2e2f2f;
+  border-radius: 1rem;
+}
+footer .socialMedia {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin: 1rem;
+  width: 100%;
+}
+footer .socialMedia p {
+  width: 100%;
+  text-align: center;
+  color: #a7a7a7;
+}
+footer .socialMedia a.social-link svg {
+  fill: #cccccc;
+  transition: fill 0.2s ease-in-out;
+}
+footer .socialMedia a.social-link svg:hover {
+  fill: white;
+}
+footer p.copyright {
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* Toggle NavBar */
+#menu.show,
+#secondMenu.show {
+  display: flex !important;
+}
+
+@media screen and (max-width: 768px) {
+  #menu {
+    display: none;
+  }
+  #secondMenu {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

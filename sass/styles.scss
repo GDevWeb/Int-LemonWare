@@ -1,0 +1,617 @@
+@import "reset.scss";
+
+nav#navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 10vh;
+  padding: $default-padding;
+
+  #logo {
+    @include flexCenter;
+    width: 30%;
+    max-width: 200px;
+    height: auto;
+
+    img {
+      @include responsiveImg();
+    }
+  }
+
+  ul#menu {
+    position: absolute;
+    top: 51px;
+    right: 0;
+    z-index: 1;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: $default-padding;
+    background-color: $CTA-color;
+    border-radius: $default-borderRadius;
+
+    @media screen and (min-width: 769px) {
+      position: static;
+      top: 0;
+      z-index: 0;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      width: 100%;
+      background-color: transparent;
+    }
+
+    li {
+      width: 100%;
+      margin: 5px 0;
+      text-align: center;
+
+      @media screen and (min-width: 769px) {
+        width: auto;
+        margin-left: $default-margin;
+      }
+
+      a {
+        color: $fontColor-second;
+
+        @media screen and (min-width: 769px) {
+          color: $fontColor-main;
+        }
+      }
+    }
+  }
+
+  #secondMenu {
+    display: none;
+
+    @media screen and (min-width: 769px) {
+      width: 45%;
+      flex-direction: row;
+      justify-content: flex-end;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      gap: $default-gap;
+      width: 100%;
+    }
+
+    #liAccount,
+    #liContact {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      text-align: center;
+
+      @media screen and (min-width: 769px) {
+        width: 45%;
+        width: auto;
+      }
+    }
+  }
+}
+
+button#btnNavBar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  @include flexCenter;
+  width: 40px;
+  height: 40px;
+  background-color: $CTA-color;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: $fontColor-second;
+
+  @media screen and (min-width: 769px) {
+    display: none;
+  }
+}
+
+/* end navBar  */
+section#hero {
+  @include flexCenter;
+  width: 100%;
+
+  #leftPart,
+  #rightPart {
+    @include flexCenter;
+    flex-basis: 100%;
+
+    @media screen and (min-width: 990px) {
+      flex-basis: 45%;
+
+    }
+
+    #breadCrumb {
+      display: flex;
+      align-items: start;
+      justify-content: flex-start;
+      gap: $default-gap;
+      width: 100%;
+      margin: $default-margin;
+      padding: $default-padding;
+
+
+    }
+
+    ul {
+      @include flexCenter;
+      display: inline-flex;
+      width: 100%;
+
+      a {
+        transition: 0.2s color ease-in-out;
+
+        &:hover {
+          color: $CTA-color;
+        }
+      }
+    }
+
+    #content {
+      @include flexCenter;
+      padding: $default-padding;
+      width: 100%;
+
+      p.description {
+        text-align: center;
+        color: $fontColor-description;
+      }
+
+      #buttonsContainer {
+        @include flexCenter;
+        width: 100%;
+      }
+    }
+
+  }
+
+  #group_sixth {
+    position: relative;
+    display: inline-block;
+    padding: 1rem;
+    @include boxShadow;
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .element {
+      width: 2rem;
+      height: 2rem;
+      background-color: $CTA-color;
+      position: absolute;
+
+    }
+
+    .element.one {
+      top: 60px;
+      right: -10px;
+      clip-path: polygon(0 0, 100% 0, 0 100%);
+      transform: rotate(180deg);
+    }
+
+    .element.two {
+      bottom: 40px;
+      right: -10px;
+      width: 5rem;
+      height: 5rem;
+      transform: rotate(90deg);
+      clip-path: polygon(100% 0, 100% 100%, 0 0);
+    }
+
+    .element.three {
+      bottom: 150px;
+      left: -10px;
+      clip-path: polygon(0 100%, 100% 100%, 0 0);
+    }
+
+    .element.four {
+      bottom: -10px;
+      right: -10px;
+      clip-path: polygon(100% 100%, 0 100%, 100% 0);
+    }
+
+  }
+}
+
+/* end section hero  */
+
+section#why_us {
+  @include flexCenter;
+  flex-basis: 100%;
+
+  .content_text {
+    @include flexCenter;
+    flex-basis: 100%;
+
+    @media screen and (min-width:990px) {
+      flex-basis: 45%;
+
+    }
+  }
+}
+
+#logoContainer {
+  @include flexCenter($justifyContent : space-evenly);
+  flex-basis: 100%;
+
+  @media screen and (min-width:990px) {
+    flex-basis: 45%;
+
+  }
+
+
+  img {
+    width: 45%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+
+    @media screen and (min-width: 768px) {
+      width: 25%;
+    }
+  }
+}
+
+#serviceContainer {
+  @include flexCenter;
+  flex-basis: 100%;
+
+}
+
+.card {
+  @include flexCenter;
+  width: 100%;
+  background: transparent;
+  @include boxShadow;
+
+  @media screen and (min-width: 768px) {
+    width: 45%;
+    min-height: 550px;
+
+  }
+
+  @media screen and (min-width: 990px) {
+    width: 45%;
+
+  }
+
+  @media screen and (min-width: 1025px) {
+    width: 22%;
+    min-height: 600px;
+  }
+
+
+  .frame {
+    @include flexCenter;
+    width: 100%;
+
+    img {
+      @include responsiveImg(45%);
+    }
+  }
+
+  .content {
+    @include flexCenter;
+    width: 100%;
+
+    p {
+      text-align: center
+    }
+  }
+
+}
+
+/* end why_us  */
+
+section#pricing {
+  @include flexCenter;
+  width: 100%;
+}
+
+#pricingContainer {
+  @include flexCenter;
+  width: 100%;
+
+  h1 {
+    width: 100%;
+  }
+
+  .content_text {
+    @include flexCenter;
+    text-align: center;
+  }
+
+  #selectPaymentOption {
+    width: 100%;
+  }
+}
+
+/* switch button */
+.toggle-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+  width: 100%;
+
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+    font-size: 2rem;
+    font-weight: 500;
+  }
+}
+
+.discount {
+  padding: 2px 5px;
+  margin-left: 2rem;
+  border-radius: 1rem;
+  font-size: 1.6rem;
+  text-align: center;
+  background-color: yellow;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 75px;
+  height: 34px;
+  margin: auto;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+span.slider {
+  width: 60px;
+  background-color: $CTA-color;
+}
+
+span.discount {
+  font-size: 1rem;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked+.slider {
+  background-color: #b00;
+}
+
+input:checked+.slider:before {
+  transform: translateX(26px);
+}
+
+.tab-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.tab {
+  font-size: 18px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.tab#basic.active {
+  border-bottom: 3px solid #b00;
+}
+
+.tab#premium.active {
+  border-bottom: 3px solid #888;
+}
+
+/* end switch button */
+
+#priceFieldsContainer {
+  @extend #pricingContainer;
+
+  @media screen and (min-width: 768px) {
+    justify-content: start;
+
+
+  }
+
+  .priceField {
+    @extend .card;
+
+    @media screen and (min-width: 768px) {
+      width: 45%;
+      align-items: start;
+
+    }
+
+    p.explanations {
+      text-align: center;
+    }
+
+    .paymentModeContainer {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: $default-padding;
+
+      p.price {
+        width: 100%;
+        font-size: 3rem;
+        font-weight: 800;
+        text-align: center;
+        margin: 1rem 0;
+      }
+
+    }
+
+    #buttonContainer {
+      @include flexCenter;
+      width: 100%;
+
+    }
+  }
+}
+
+section#faq {
+  width: 100%;
+  @include flexCenter;
+
+  #faqCardContainer {
+    @include flexCenter;
+
+    .card {
+      .heading {
+        @include flexCenter;
+        width: 100%;
+
+        h3 {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+/* end section faq */
+
+section#contact {
+  @include flexCenter;
+  width: 100%;
+
+  .contactContainer {
+    @include flexCenter;
+    width: 100%;
+
+    .left p {
+      width: 100%;
+      text-align: center
+    }
+
+  }
+
+  form {
+    @include flexCenter;
+    width: 100%;
+
+    .formGroup {
+      @include flexCenter;
+      width: 100%;
+
+      label {
+        width: 100%;
+        font-size: 1.8rem;
+        font-weight: 500;
+        text-align: center;
+      }
+
+      input,
+      textarea {
+        flex: 1 0 80%;
+        padding: 0.5rem 1rem;
+        @include boxShadow;
+      }
+
+      textarea {
+        min-height: 250px;
+        resize: none;
+      }
+
+    }
+  }
+}
+
+
+footer {
+  @include flexCenter;
+  width: 100%;
+  height: 15vh;
+  background-color: $CTA-color;
+  color: $fontColor-main;
+  border-radius: $default-borderRadius;
+
+
+  .socialMedia {
+    @include flexCenter;
+    width: 100%;
+
+    p {
+      width: 100%;
+      text-align: center;
+      color: $fontColor-description;
+    }
+
+    a.social-link {
+      svg {
+        fill: darken($fontColor-second, 20%);
+        transition: fill 0.2s ease-in-out;
+
+
+        &:hover {
+          fill: lighten($fontColor-second, 20%);
+        }
+      }
+    }
+  }
+
+  p.copyright {
+    width: 100%;
+    text-align: center;
+    color: $fontColor-second;
+  }
+}
+
+
+/* Toggle NavBar */
+#menu.show,
+#secondMenu.show {
+  display: flex !important;
+}
+
+@media screen and (max-width: 768px) {
+  #menu {
+    display: none;
+  }
+
+  #secondMenu {
+    display: none;
+  }
+}

@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+
+/* font */
+$default-fontFamily : "Inter",
+sans serif;
+$default-fontBase: 0.64rem;
+$default-fontSize : 1.6rem;
+$default-lineHeight : 1.6rem;
+
+$min-font-size: 1.4rem;
+$max-font-size: 2.8rem;
+$default-fontSize: 1.6rem;
+$line-height: 1.2;
+
+$fontColor-main : #2e2f2f;
+$fontColor-second : #ffffff;
+$fontColor-description : #a7a7a7;
+
+p,
+li {
+  text-wrap: balance;
+  line-height: $default-lineHeight * 1.6;
+}
+
+@import 'variables.scss';
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-align: center;
+  text-wrap: balance;
+  font-weight: bolder;
+  line-height: $default-lineHeight * 2.5;
+}
+
+h1 {
+  font-size: clamp($min-font-size, 5vw, $max-font-size);
+}
+
+h2 {
+  font-size: clamp($min-font-size, 4.5vw, $max-font-size);
+}
+
+h3 {
+  font-size: clamp($min-font-size, 4vw, $max-font-size);
+}
+
+h4 {
+  font-size: clamp($min-font-size, 3.5vw, $max-font-size);
+}
+
+h5 {
+  font-size: clamp($min-font-size, 3vw, $max-font-size);
+}
+
+h6 {
+  font-size: clamp($min-font-size, 2.5vw, $max-font-size);
+}
+
+p,
+li {
+  text-wrap: balance;
+  font-size: clamp(1.6rem, 2vw, 2rem);
+}

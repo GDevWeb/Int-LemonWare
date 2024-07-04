@@ -1,0 +1,80 @@
+@import "variables.scss";
+@import "mixins.scss";
+@import "fonts.scss";
+@import "colors.scss";
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: $default-fontBase;
+  font-family: $default-fontFamily;
+}
+
+body {
+  min-width: $min-width;
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: $default-padding;
+  background-color: $mainColor-theme;
+  color: $fontColor-main;
+  font-size: $default-fontSize;
+  line-height: $default-lineHeight;
+
+
+  #wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $default-gap;
+    width: 100%;
+    margin: 0 auto;
+    padding: $default-padding;
+  }
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  position: relative;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  width: 0;
+  height: 2px;
+  background-color: $CTA-color;
+  transition: width 0.4s;
+}
+
+a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+button {
+  @include ctaButton;
+}
+
+// img{}
+
+// video{}
+svg {
+  display: block;
+  width: 100%;
+  min-width: 24px;
+  max-width: 64px;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
