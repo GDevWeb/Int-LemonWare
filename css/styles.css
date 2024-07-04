@@ -469,25 +469,25 @@ section#why_us .content_text {
   gap: 1rem;
   padding: 1rem;
   margin: 1rem;
-  width: 100%;
+  width: calc(100% - 1.6rem);
   background: transparent;
   border-radius: 1rem;
   box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
 }
 @media screen and (min-width: 768px) {
   .card, #priceFieldsContainer .priceField {
-    width: 45%;
+    width: calc(45% - 1.6rem);
     min-height: 550px;
   }
 }
 @media screen and (min-width: 990px) {
   .card, #priceFieldsContainer .priceField {
-    width: 45%;
+    width: calc(33% - 1.6rem);
   }
 }
 @media screen and (min-width: 1025px) {
   .card, #priceFieldsContainer .priceField {
-    width: 22%;
+    width: calc(22% - 1.6rem);
     min-height: 600px;
   }
 }

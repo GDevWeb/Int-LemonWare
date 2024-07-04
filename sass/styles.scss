@@ -271,23 +271,27 @@ section#why_us {
 
 .card {
   @include flexCenter;
-  width: 100%;
+  width: calc(100% - 1.6rem);
+  // width: 100%;
   background: transparent;
   @include boxShadow;
 
   @media screen and (min-width: 768px) {
-    width: 45%;
+    // width: 45%;
+    width: calc(45% - 1.6rem);
+
     min-height: 550px;
 
   }
 
   @media screen and (min-width: 990px) {
-    width: 45%;
+    width: calc(33% - 1.6rem);
+
 
   }
 
   @media screen and (min-width: 1025px) {
-    width: 22%;
+    width: calc(22% - 1.6rem);
     min-height: 600px;
   }
 
